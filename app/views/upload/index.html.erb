@@ -1,0 +1,11 @@
+<h1>index view</h1>
+<br>
+
+<p>you can upload your picture</p>
+
+<br>
+<%= form_with url: "/upload/show", multipart: true, data: {turbo: false} do |form| %>
+  <%= form.file_field :picture %>
+  <%= form.submit 'upload' %>
+<% end %>
+  

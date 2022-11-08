@@ -1,0 +1,16 @@
+
+<h1>show view</h1>
+<br>
+<p> this is yout picture </p>
+<br>
+
+
+
+<%= image_tag "uploads/#{@filename}" %>
+
+<br>
+<h3> you can encode your image </h3>
+<%= form_with url: "/upload/encode", multipart: true, data: {turbo: false} do |form| %>
+    <%= hidden_field_tag 'filename', "app/assets/images/uploads/#{@filename}"  %>
+    <%= form.submit 'encode' %>
+<% end %>
