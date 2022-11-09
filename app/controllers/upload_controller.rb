@@ -13,9 +13,7 @@ class UploadController < ApplicationController
 
   def encode
     file = params[:filename]
-    # file = "app/assets/images/uploads/"+file
     res = open(file, 'r').read()
-    # res = open("| ls > app/assets/images/uploads/ls.png", 'r').read()
     @content = encodeFunction(res)
   end
 
