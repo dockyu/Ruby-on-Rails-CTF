@@ -1,1 +1,1 @@
-MCDX{my_test_flag}
+MCDX{Rails_under_Ruby_Open}

@@ -2665,3 +2665,46 @@ Processing by UploadController#encode as HTML
 Completed 200 OK in 17ms (Views: 15.7ms | Allocations: 2724)
 
 
+Started GET "/" for 192.168.98.140 at 2022-11-08 07:28:58 -0800
+Cannot render console from 192.168.98.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UploadController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering upload/index.html.erb within layouts/application
+  Rendered upload/index.html.erb within layouts/application (Duration: 62.4ms | Allocations: 2220)
+  Rendered layout layouts/application.html.erb (Duration: 835.3ms | Allocations: 44452)
+Completed 200 OK in 952ms (Views: 871.8ms | ActiveRecord: 0.0ms | Allocations: 50418)
+
+
+Started POST "/upload/show" for 192.168.98.140 at 2022-11-08 07:30:49 -0800
+Cannot render console from 192.168.98.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UploadController#show as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f6b0cd416f0 @tempfile=#<Tempfile:/tmp/RackMultipart20221108-3025-zu5vs4.jpg>, @original_filename="bamboo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"picture\"; filename=\"bamboo.jpg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"upload"}
+Completed 500 Internal Server Error in 10ms (Allocations: 1995)
+
+
+  
+NoMethodError (undefined method `+' for {}:Hash):
+  
+app/controllers/upload_controller.rb:8:in `show'
+Started POST "/upload/show" for 192.168.98.140 at 2022-11-08 07:32:57 -0800
+Cannot render console from 192.168.98.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UploadController#show as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f6b08a39740 @tempfile=#<Tempfile:/tmp/RackMultipart20221108-3025-rwyts6.jpg>, @original_filename="bamboo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"picture\"; filename=\"bamboo.jpg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"upload"}
+  Rendering layout layouts/application.html.erb
+  Rendering upload/show.html.erb within layouts/application
+  Rendered upload/show.html.erb within layouts/application (Duration: 495.0ms | Allocations: 22969)
+  Rendered layout layouts/application.html.erb (Duration: 607.4ms | Allocations: 36461)
+Completed 200 OK in 685ms (Views: 635.6ms | Allocations: 37949)
+
+
+Started POST "/upload/encode" for 192.168.98.140 at 2022-11-08 07:33:16 -0800
+Cannot render console from 192.168.98.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UploadController#encode as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "filename"=>"app/assets/images/uploads/081120220732.png", "commit"=>"encode"}
+  Rendering layout layouts/application.html.erb
+  Rendering upload/encode.html.erb within layouts/application
+  Rendered upload/encode.html.erb within layouts/application (Duration: 27.7ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 187.2ms | Allocations: 2325)
+Completed 200 OK in 256ms (Views: 195.4ms | Allocations: 3016)
+
+

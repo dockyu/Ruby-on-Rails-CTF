@@ -4,10 +4,11 @@ class UploadController < ApplicationController
 
   def show
     uploaded_file = params[:picture]
-    File.open(Rails.root.join('app', 'assets', 'images', 'uploads', uploaded_file.original_filename), 'wb') do |file|
+    filename_hash = d = DateTime.now.strftime("%d%m%Y%H%M")+".png"
+    File.open(Rails.root.join('app', 'assets', 'images', 'uploads', filename_hash), 'wb') do |file|
       file.write(uploaded_file.read)
     end
-    @filename = uploaded_file.original_filename
+    @filename = filename_hash
   end
 
   def encode
